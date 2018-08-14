@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(150, 150, 150, 1);
+
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 400px 1fr 1fr 1fr;
+  grid-template-rows: 2fr 25% 1fr 25%;
+}
