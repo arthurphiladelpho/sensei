@@ -68,6 +68,12 @@
   }
 }
 
+.text {
+  position: absolute;
+  bottom: 3em;
+  margin-left: 13px;
+}
+
 @-webkit-keyframes opacity {
   0%, 100% {opacity:0;}
   50% {opacity:1;}
