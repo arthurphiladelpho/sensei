@@ -1,0 +1,28 @@
+
+
+
+
+
+<div class="container">
+
+<h1>Lessons#index</h1>
+
+  <div class="row">
+
+<% @lessons.each do |lesson| %>
+    <div class="col-xs-12 col-sm-4">
+<div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://loremflickr.com/320/240/yoga?random=<%= lesson.id %>');">
+  <div class="card-category"><%= lesson.style %></div>
+  <div class="card-description">
+    <h2 = class="card-name"><%= lesson.name %></h2>
+    <p class="card-description"><%= lesson.description %></p>
+    <p class="difficulty">Difficulty: <%= lesson.difficulty %></p>
+    <p class="duration">Duration: <%= lesson.duration %></p>
+    <p class="price">Price: <%= lesson.price %></p>
+  </div>
+  <img class="card-user" src="https://loremflickr.com/40/40/brazil,girl/all?random=<%= lesson.id %>">
+  <a class="card-link" href="#" ></a>
+</div>
+    </div>
+<% end %>
+
