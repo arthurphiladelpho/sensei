@@ -1,16 +1,10 @@
-.container {
-  display: flex;
-  justify-content: space-around;
-  background-color: rgba(150, 150, 150, 1);
 
-}
 .cards-container {
   flex: 1 0 60%;
   background-color: rgba(230, 230, 230, 1);
 }
-.row {
+.filters {
   display: flex;
   justify-content: space-around;
-  margin: 0 15px;
   background-color: rgba(200, 200, 200, 1);
 }

@@ -1,27 +1,30 @@
 
 <div class="container">
 
-
-  <h1>Lessons Index</h1>
+  <div class="heading">
+    <h1>Lessons Index</h1>
+  </div>
 </div>
 <div class="main-container">
 
 
   <div class="cards-container">
     <div class="row">
+      <div class="filters">
         <h3>Sort by: ********</h3>
         <h3>Filter by:</h3>
         <h3>Style</h3>
         <h3>Difficulty</h3>
         <h3>Price</h3>
         <h3>Duration</h3>
+      </div>
     </div>
 
 
 
     <% @lessons.each do |lesson| %>
     <div class="col-xs-12 col-sm-4">
-      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://loremflickr.com/320/240/yoga?random=<%= lesson.id %>');">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://loremflickr.com/320/240/<%= lesson.style %>?random=<%= lesson.id %>');">
         <div class="card-category"><%= lesson.style %></div>
         <div class="card-description">
           <h2><%= lesson.name %></h2>
@@ -31,20 +34,20 @@
             <li><p class="card-difficulty">Difficulty: <%= lesson.difficulty %></p></li>
             <li><p class="card-duration">Duration: <%= lesson.duration %></p></li>
             <li><p class="card-price">Price: <%= lesson.price %></p>
-          </ul>
+            </ul>
+          </div>
+          <img class="card-user" src="https://loremflickr.com/40/40/brazil,girl/all?random=<%= lesson.id %>">
+          <a class="card-link" href="#" ></a>
         </div>
-        <img class="card-user" src="https://loremflickr.com/40/40/brazil,girl/all?random=<%= lesson.id %>">
-        <a class="card-link" href="#" ></a>
       </div>
+      <% end %>
+
+
+
     </div>
-    <% end %>
-
+    <div id="map">
+      <h1>MAP</h1>
+    </div>
 
 
   </div>
-  <div id="map">
-    <h1>MAP</h1>
-  </div>
-
-
-</div>

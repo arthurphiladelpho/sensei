@@ -1,17 +1,43 @@
 
-<div class="container">
+<div class="heading">
   <h1>Lessons Show</h1>
 </div>
 <div class="main-container">
 
-<div class="grid">
+  <div class="grid">
+    <div class="grid-trainer">User Profile</div>
+    <div class="grid-header">
+      <h1><%= @lesson.name %></h1>
+    </div>
+    <div class="grid-description">
+      <p><%= @lesson.description %> <br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci voluptatem, eligendi fuga voluptates similique in dolorem hic quibusdam inventore. Ducimus odio magni optio, error dolor dicta consequatur, vitae. Fuga,
+        <br>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia possimus asperiores omnis consectetur! Voluptates atque voluptate error, ipsam unde. Expedita porro culpa fugit laudantium vero mollitia, sint iure corrupti modi!
+      </p>
+      </div>
+      <div class="grid-style">
+        <h3><%= @lesson.style %></h2>
+      </div>
+      <div class="grid-difficulty">
+        <h3>difficulty: <%= @lesson.difficulty %></h2>
+      </div>
+      <div class="grid-duration">
+        <h3>Duration: <%= @lesson.duration %>mins</h2>
+      </div>
+      <div class="grid-map">Map</div>
+    </div>
 
-</div>
+    <div class="booking-form">
+      booking form
+      Price
+      Date
+      Time
+      Book Button
+    </div>
 
 
 
 
-</div>
 
-
-</div>
+  </div>
