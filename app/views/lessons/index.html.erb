@@ -33,11 +33,9 @@
             </div>
             <img class="card-user" src="https://loremflickr.com/40/40/brazil,girl/all?random=<%= lesson.id %>">
             <a class="card-link" href="/lessons/<%= lesson.id %>" ></a>
-          </div>
         </div>
+      </div>
       <% end %>
     </div>
-    <div id="map">
-      <h1>MAP</h1>
-    </div>
+    <div id="map" data-markers=<%= @markers.to_json %>></div>
   </div>
