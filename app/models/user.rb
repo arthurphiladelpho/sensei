@@ -5,5 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   # Somebody, please, check this. I am not sure
-  has_many :lessons, through: :bookings
+  has_many :lessons
 end
