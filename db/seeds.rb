@@ -18,7 +18,8 @@ Lesson.create(
   style: 'strength',
   difficulty: 1,
   duration: 60,
-  price: 100
+  price: 100,
+  location: "R. Visc. de Pirajá, 495 - Ipanema, Rio de Janeiro - RJ, 22410-002"
 }
 )
 Lesson.create(
@@ -28,7 +29,8 @@ Lesson.create(
   style: 'cardio',
   difficulty: 2,
   duration: 45,
-  price: 20
+  price: 20,
+  location: "Posto 8, Av. Vieira Souto, S/N - Ipanema, Rio de Janeiro - RJ, 22420-002"
 }
 )
 Lesson.create(
@@ -38,7 +40,8 @@ Lesson.create(
   style: 'cardio',
   difficulty: 3,
   duration: 60,
-  price: 40
+  price: 40,
+  location: "Praça Nossa Senhora da Paz Ipanema, Rio de Janeiro RJ, 22420-030 - Ipanema, Rio de Janeiro - RJ, 22420-030"
 }
 )
 Lesson.create(
@@ -48,7 +51,8 @@ Lesson.create(
   style: 'strength',
   difficulty: 1,
   duration: 60,
-  price: 100
+  price: 100,
+  location: "Av. Delfim Moreira, 1202 - Leblon, Rio de Janeiro - RJ, 22441-000"
 }
 )
 Lesson.create(
@@ -58,7 +62,8 @@ Lesson.create(
   style: 'flexibility',
   difficulty: 2,
   duration: 120,
-  price: 220
+  price: 220,
+  location: "R. Nossa Sra. de Fátima, 7 - Ipanema, Rio de Janeiro - RJ, 22071-060"
 }
 )
 
