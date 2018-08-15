@@ -1,10 +1,13 @@
 class Lesson < ApplicationRecord
   has_many :bookings
-
   # using 'location' attribute to locate lat/long
   geocoded_by :location
   # runs geocode (searches for lat/long) after Lesson is saved to database.
   after_validation :geocode, if: :will_save_change_to_location?
+
+  # Somebody, please, check this. I am not sure
+  has_many :users, through: :bookings
+
 
   validates :name, presence: true, uniqueness: true
   validates :description, presence: true

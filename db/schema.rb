@@ -15,6 +15,16 @@ ActiveRecord::Schema.define(version: 2018_08_15_161801) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "bookings", force: :cascade do |t|
+    t.datetime "datetime"
+    t.bigint "user_id"
+    t.bigint "lesson_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["lesson_id"], name: "index_bookings_on_lesson_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
   create_table "lessons", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -47,5 +57,8 @@ ActiveRecord::Schema.define(version: 2018_08_15_161801) do
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
+
+  add_foreign_key "bookings", "lessons"
+  add_foreign_key "bookings", "users"
 
 end

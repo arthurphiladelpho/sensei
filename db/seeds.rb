@@ -68,3 +68,23 @@ Lesson.create(
 )
 
 puts "5 Lessons successfully created!"
+# ______________________________________________________________________________
+
+
+puts "Deleting all previous Bookings..."
+Booking.delete_all
+puts "Creating bookings..."
+
+Booking.create({
+  user_id: 5,
+  lesson_id: 27,
+  datetime: 'January 2019 12 pm'
+})
+
+Booking.create({
+  user_id: 6,
+  lesson_id: 28,
+  datetime: 'January 2019 14 pm'
+})
+
+puts "2 Bookings successfully created!"
