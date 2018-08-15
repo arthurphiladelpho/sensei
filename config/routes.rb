@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   resources :lessons do
     resources :bookings, only: [:new, :create]
   end
-  resources :bookings, except: [:new, :create]
+  resources :bookings, except: [:index, :new, :create]
 end
