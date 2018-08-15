@@ -31,7 +31,24 @@
         </div>
 
         <div class="booking-form">
-          <%= link_to 'Book it!', new_lesson_booking_path(@lesson) %>
+          <ul>
+
+            <li>
+              <h1><%= @lesson.name %></h1>
+            </li>
+            <li>
+
+              <h2>$<%= @lesson.price %></h2>
+            </li>
+            <li>
+              <h3><%= @lesson.duration %> minutes</h3>
+
+            </li>
+            <li>
+
+              <%= link_to 'Book it!', new_lesson_booking_path(@lesson), class: "btn btn-primary" %>
+            </li>
+          </ul>
         </div>
 
 

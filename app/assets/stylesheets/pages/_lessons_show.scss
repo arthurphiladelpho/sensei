@@ -25,6 +25,12 @@
   top: 0 !important;
   background-color: rgba(220, 220, 220, 1);
   margin-right: 180px;
+  display: flex;
+  align-items: center;
+  ul {
+  list-style: none;
+  }
+
 }
 .grid-trainer {
   grid-row: 1 / 4;
