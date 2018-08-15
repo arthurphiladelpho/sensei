@@ -3,5 +3,8 @@ Rails.application.routes.draw do
   resources :pages, only: :about
   devise_for :users
   resources :users, only: [:show, :index]
-  resources :lessons
+  resources :lessons do
+    resources :bookings, only: [:new, :create]
+  end
+  resources :bookings, except: [:new, :create]
 end
