@@ -27,19 +27,15 @@
           </div>
           <div class="grid-map">
             <div id="map" data-markers=<%= @markers.to_json %>></div>
-            </div>
           </div>
-
-          <div class="booking-form">
-            booking form
-            Price
-            Date
-            Time
-            Book Button
-          </div>
-
-
-
-
-
         </div>
+
+        <div class="booking-form">
+          <%= link_to 'Book it!', new_lesson_booking_path(@lesson) %>
+        </div>
+
+
+
+
+
+      </div>
