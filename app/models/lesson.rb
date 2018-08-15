@@ -7,4 +7,9 @@ class Lesson < ApplicationRecord
   validates :duration, presence: true
   validates :price, presence: true
   validates :style, presence: true
+  validates :location, presence: true
+  # using 'location' attribute to locate lat/long
+  geocoded_by :location
+  # runs geocode (searches for lat/long) after Lesson is saved to database.
+  after_validation :geocode, if: :will_save_change_to_location?
 end
