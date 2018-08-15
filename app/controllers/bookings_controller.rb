@@ -20,11 +20,7 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @booking.user_id = current_user.id
     @booking.datetime = 'January 1 2019 12:00 pm'
-     if @booking.save
-      redirect_to lessons_path
-    else
-      render :new
-    end
+    @booking.save
   end
 
   def destroy

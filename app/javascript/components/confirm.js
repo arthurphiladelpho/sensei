@@ -2,13 +2,19 @@ import swal from 'sweetalert';
 
 
 function SweetAlertConfirm() {
+
   const confirmButton = document.getElementById('confirm-button');
   if (confirmButton) {
     confirmButton.addEventListener('click', () => {
       swal({
         title: "Confirmed",
-        text: "Your lesson is booked",
-        icon: "success"
+        text: "Your lesson is booked ",
+        icon: "success",
+        button: 'Ok!'
+      }).then(willRedirect => {
+        if (willRedirect) {
+          window.location.href = "http://localhost:3000/lessons";
+        }
       });
     });
   }
