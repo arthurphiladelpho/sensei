@@ -1,0 +1,10 @@
+<h1>Review Your Lesson's details</h1>
+
+<h3><%= @lesson.name %></h3>
+<h3><%= @lesson.description %></h3>
+<h3>Price: <%= @lesson.price %></h3>
+<h3>Difficulty: <%= @lesson.difficulty %></h3>
+<h3>Duration: <%= @lesson.duration %></h3>
+<h3>Style: <%= @lesson.style %></h3>
+
+<%= render 'shared/booking_form' %>
