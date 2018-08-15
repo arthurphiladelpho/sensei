@@ -15,29 +15,32 @@
         <br>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia possimus asperiores omnis consectetur! Voluptates atque voluptate error, ipsam unde. Expedita porro culpa fugit laudantium vero mollitia, sint iure corrupti modi!
       </p>
-      </div>
-      <div class="grid-style">
-        <h3><%= @lesson.style %></h2>
+    </div>
+    <div class="grid-style">
+      <h3><%= @lesson.style %></h2>
       </div>
       <div class="grid-difficulty">
         <h3>difficulty: <%= @lesson.difficulty %></h2>
-      </div>
-      <div class="grid-duration">
-        <h3>Duration: <%= @lesson.duration %>mins</h2>
-      </div>
-      <div class="grid-map">Map</div>
-    </div>
+        </div>
+        <div class="grid-duration">
+          <h3>Duration: <%= @lesson.duration %>mins</h2>
+          </div>
+          <div class="grid-map">
+            <div id="map" "data-markers="<%= @markers.to_json %>"
+              ></div>
+            </div>
+          </div>
 
-    <div class="booking-form">
-      booking form
-      Price
-      Date
-      Time
-      Book Button
-    </div>
+          <div class="booking-form">
+            booking form
+            Price
+            Date
+            Time
+            Book Button
+          </div>
 
 
 
 
 
-  </div>
+        </div>
