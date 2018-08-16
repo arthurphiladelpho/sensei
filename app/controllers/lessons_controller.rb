@@ -19,4 +19,33 @@ class LessonsController < ApplicationController
       lng: @lesson.longitude
     }]
   end
+
+  def new
+    @lesson = Lesson.new
+  end
+
+  def create
+    @lesson = Lesson.new(lesson_params)
+    @lesson.user = current_user
+
+    if @lesson.save
+      redirect_to @lesson
+    else
+      render :new
+    end
+  end
+
+  private
+
+  def lesson_params
+    params.require(:lesson).permit(
+      :name,
+      :description,
+      :style,
+      :difficulty,
+      :duration,
+      :price,
+      :location
+    )
+  end
 end
