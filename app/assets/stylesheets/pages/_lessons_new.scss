@@ -1,0 +1,38 @@
+body{
+  color: gray;
+}
+
+h1 {
+  margin: 20px;
+}
+
+.lesson {
+  margin: 10px;
+  padding: 20px;
+  position:relative;
+  height: 50%;
+  font-size: small;
+}
+
+.rio {
+  height: 70vh;
+  margin: 0 40px;
+  width: 600px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.create{
+  border-radius: 5px;
+  margin: 15px;
+}
+
+.form-group{
+  height: 70%;
+  margin: 4px;
+}
+
+::placeholder {
+  font-size: 15px;
+}
