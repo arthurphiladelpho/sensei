@@ -7,13 +7,13 @@
 <div class="main-container">
   <div class="cards-container">
     <div class="row">
-      <div class="filters">
-        <h3>Sort by: ********</h3>
-        <h3>Filter by:</h3>
-        <h3>Style</h3>
-        <h3>Difficulty</h3>
-        <h3>Price</h3>
-        <h3>Duration</h3>
+      <div class="search">
+        <form action="/lessons" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+          <input type="text" name="query" id="query" class="searchTerm" placeholder="Find a lesson">
+          <button type="submit" class="searchButton">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
       </div>
     </div>
 
