@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :users
   resources :users, only: [:show, :index]
   resources :lessons do
-    resources :bookings, only: [:new, :create]
+    resources :bookings, only: [:create]
   end
   resources :bookings, except: [:index, :new, :create]
 end

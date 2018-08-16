@@ -1,4 +1,4 @@
-<%= simple_form_for :booking, class: "align-middle", method: :get do |t| %>
+<%= simple_form_for :booking, class: "align-middle", method: :post do |t| %>
   <%= t.input :datetime, as: :string, input_html: { class: "datetimepicker" }, label: 'Date and Time', required: false, placeholder: "  Pick date and time", id:"datetime-label" %>
-  <%= t.submit "Book it now!", class:"btn btn-primary book-btn" %>
+  <%= t.submit "Book it now!", class:"btn btn-primary book-btn", onclick="redirect()" %>
 <% end %>

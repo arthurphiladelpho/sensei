@@ -11,12 +11,8 @@ class BookingsController < ApplicationController
   def update
   end
 
-  def new
-    @lesson = Lesson.find(params[:lesson_id])
-    @booking = Booking.new
-  end
-
   def create
+    raise
     @booking = Booking.new(booking_params)
     @booking.user_id = current_user.id
     @booking.datetime = 'January 1 2019 12:00 pm'
