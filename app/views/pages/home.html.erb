@@ -6,10 +6,12 @@
     </p>
     <div class="wrap">
       <div class="search">
-        <input type="text" class="searchTerm" placeholder="What are you looking for?">
-        <button type="submit" class="searchButton">
-          <i class="fa fa-search"></i>
-      </button>
+        <form action="/lessons" accept-charset="UTF-8" method="get"><input name="utf8" type="hidden" value="✓">
+          <input type="text" name="query" id="query" class="searchTerm" placeholder="Find a lesson">
+          <button type="submit" class="searchButton">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
       </div>
     </div>
   </div>
