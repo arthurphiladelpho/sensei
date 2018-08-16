@@ -8,7 +8,6 @@ class LessonsController < ApplicationController
       @lessons = Lesson.all
     end
 
-    # @lessons_markers = Lesson.where.not(latitude: nil, longitude: nil)
     # create markers from the lesson latitude and longitude attributes which will be available to be displayed on the map.
     @markers = @lessons.map do |lesson|
       {
