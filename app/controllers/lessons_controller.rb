@@ -45,7 +45,8 @@ class LessonsController < ApplicationController
       :difficulty,
       :duration,
       :price,
-      :location
+      :location,
+      :photo
     )
   end
 end

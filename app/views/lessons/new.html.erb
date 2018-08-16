@@ -48,12 +48,12 @@
               </div>
               <!-- we have to change the image adding -->
               <div class="form-group">
-                <label for="lesson-image">Image</label>
-                <input type="file" class="form-control-file" id="lesson-image">
+                <%= f.input :photo %>
+                <%= f.input :photo_cache, as: :hidden %>
               </div>
 
-
                <%= f.button :submit, id: "confirm-button", class: "btn-primary create" %>
+
             <% end %>
             </div>
 
