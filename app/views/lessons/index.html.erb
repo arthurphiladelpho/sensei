@@ -19,23 +19,29 @@
 
     <% @lessons.each do |lesson| %>
       <div class="col-xs-12 col-sm-4">
-        <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('https://loremflickr.com/320/240/<%= lesson.style %>?random=<%= lesson.id %>');">
-          <div class="card-category"><%= lesson.style %></div>
-          <div class="card-description">
-            <h2><%= lesson.name %></h2>
-          </div>
-          <div class="card-attributes">
-            <ul class="list-inline">
-              <li><p class="card-difficulty">Difficulty: <%= lesson.difficulty %></p></li>
-              <li><p class="card-duration">Duration: <%= lesson.duration %></p></li>
-              <li><p class="card-price">Price: <%= lesson.price %></p>
+        <div class="card-cell">
+          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path lesson.photo, height: 240, width: 320, crop: :fill %>')">
+            <div class="card-category">
+              <%= lesson.style %>
+            </div>
+            <div class="card-attributes">
+              <ul class="list-inline">
+                <li><p class="card-difficulty">Difficulty: <%= lesson.difficulty %></p></li>
+                <li><p class="card-duration">Duration: <%= lesson.duration %></p></li>
+                <li><p class="card-price">Price: <%= lesson.price %></p></li>
               </ul>
             </div>
             <img class="card-user" src="https://loremflickr.com/40/40/brazil,girl/all?random=<%= lesson.id %>">
             <a class="card-link" href="/lessons/<%= lesson.id %>" ></a>
+          </div>
+        </div>
+        <div class="title-container">
+          <div class="card-description">
+            <h2><%= lesson.name %></h2>
+          </div>
         </div>
       </div>
-      <% end %>
-    </div>
-    <div id="map" data-markers=<%= @markers.to_json %>></div>
+    <% end %>
   </div>
+  <div id="map" data-markers=<%= @markers.to_json %>></div>
+</div>
