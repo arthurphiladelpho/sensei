@@ -122,6 +122,8 @@ Lesson.create(
     price: 220
   }
 
+)
+
 puts "12 Lessons successfully created!"
 
 puts "Deleting all previous Bookings..."

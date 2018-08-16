@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   # Somebody, please, check this. I am not sure
   has_many :lessons
+  has_many :bookings
 end
