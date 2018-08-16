@@ -11,6 +11,7 @@ class UsersController < ApplicationController
 
   def dashboard
    @user = User.find(params[:id])
+   @lessons = Lesson.where(user_id: @user.id)
   end
 
 end

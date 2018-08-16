@@ -1,8 +1,38 @@
-<h1>Hello world</h1>
+<div class="container">
+  <div class="dashboard-content">
+    <h2><%= @user.first_name %> <%= @user.last_name %></h2>
+    <h5><%= @user.email %></h5>
 
-
-
-
-
+    <% @lessons.each do |lesson| %>
+      <div class="col-xs-12 col-sm-6">
+        <div class="card-cell">
+          <% if lesson.photo.present? %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path lesson.photo, height: 240, width: 250, crop: :fill %>')">
+          <% else %>
+            <div class="card">
+          <% end %>
+            <div class="card-category">
+              <%= lesson.style %>
+            </div>
+            <div class="card-attributes">
+              <ul class="list-inline">
+                <li><p class="card-difficulty">Difficulty: <%= lesson.difficulty %></p></li>
+                <li><p class="card-duration">Duration: <%= lesson.duration %></p></li>
+                <li><p class="card-price">Price: <%= lesson.price %></p></li>
+              </ul>
+            </div>
+            <img class="card-user" src="https://loremflickr.com/40/40/brazil,girl/all?random=<%= lesson.id %>">
+            <a class="card-link" href="/lessons/<%= lesson.id %>" ></a>
+          </div>
+        </div>
+        <div class="title-container">
+          <div class="card-description">
+            <h5><%= lesson.name %></h5>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
 
 
