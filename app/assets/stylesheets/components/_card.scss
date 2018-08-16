@@ -1,3 +1,12 @@
+.card-cell {
+  position: relative;
+  height: 250px;
+}
+.title-container {
+  text-align: center;
+  display: flex;
+  width: 100%;
+}
 .card {
   height: 175px;
   text-shadow: 0 1px 3px rgba(0,0,0,0.6);
@@ -16,23 +25,21 @@
 }
 .card-category {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 0;
+  left: 0;
   font-size: 15px;
   text-transform: uppercase;
+  background-color: white;
+  padding: 2% 6%;
+  color: black;
+  text-shadow: none;
 }
 
 .card-description {
   position: absolute;
-  bottom: 40px;
-  left: 10px;
+  bottom: 10%;
   h2 {
     font-size: 24px;
-  }
-  p {
-    font-size: 14px;
-    opacity: 0.8;
-    font-weight: lighter;
   }
 }
 

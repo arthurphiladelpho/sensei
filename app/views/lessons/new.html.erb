@@ -1,0 +1,67 @@
+<div class="container">
+   <div>
+      <h2>Create your new lessons</h2>
+    </div>
+      <div class="box">
+        <div class="lesson">
+          <div class="row">
+            <div class="col-xs-12 col-sm-5">
+            <%= simple_form_for @lesson do |f| %>
+              <div class="form-group">
+                <%= f.input :name, class: "form-control", placeholder: "Your lesson's name" %>
+              </div>
+
+              <div class="form-group">
+                <%= f.input :description, as: :text, class: "form-control", placeholder: "Describe your lesson" %>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <%= f.input :style, class: "form-control", placeholder: "Your lesson's style" %>
+                  </div>
+                </div>
+
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <%= f.input :difficulty, collection: 1..5 %>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <%= f.input :duration, class: "form-control", placeholder: "How long? (min)" %>
+                  </div>
+                </div>
+
+                <div class="col-xs-6">
+                  <div class="form-group">
+                    <%= f.input :price, class: "form-control", placeholder: "How much? (R$)" %>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <%= f.input :location, class: "form-control", placeholder: "Where is it?" %>
+              </div>
+              <!-- we have to change the image adding -->
+              <div class="form-group">
+                <%= f.input :photo %>
+                <%= f.input :photo_cache, as: :hidden %>
+              </div>
+
+               <%= f.button :submit, id: "confirm-button", class: "btn-primary create" %>
+
+            <% end %>
+            </div>
+
+            <div class="col-sm-6 hidden-xs">
+              <div class="rio" style="background-image: url('https://images.unsplash.com/photo-1509833903111-9cb142f644e4?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3d214160102ad3549a567e2c45b345e2&auto=format&fit=crop&w=1255&q=80')">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>
