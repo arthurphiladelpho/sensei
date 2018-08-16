@@ -20,7 +20,11 @@
     <% @lessons.each do |lesson| %>
       <div class="col-xs-12 col-sm-4">
         <div class="card-cell">
-          <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path lesson.photo, height: 240, width: 320, crop: :fill %>')">
+          <% if lesson.photo.present? %>
+            <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path lesson.photo, height: 240, width: 320, crop: :fill %>')">
+          <% else %>
+            <div class="card">
+          <% end %>
             <div class="card-category">
               <%= lesson.style %>
             </div>
