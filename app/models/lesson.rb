@@ -1,4 +1,5 @@
 class Lesson < ApplicationRecord
+  belongs_to :user
   has_many :bookings
   has_many :users, through: :bookings
   mount_uploader :photo, PhotoUploader
@@ -13,4 +14,11 @@ class Lesson < ApplicationRecord
   geocoded_by :location
   # runs geocode (searches for lat/long) after Lesson is saved to database.
   after_validation :geocode, if: :will_save_change_to_location?
+
+  include PgSearch
+  pg_search_scope :search_by_name_style_and_description,
+  against: [ :name, :description, :style ],
+  using: {
+    tsearch: { prefix: true } # <-- now `superman batm` will return something!
+  }
 end

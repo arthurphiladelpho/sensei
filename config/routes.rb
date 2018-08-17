@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   devise_for :users
   resources :users, only: [:show, :index]
+  get 'users/:id/dashboard', to: 'users#dashboard', as: :dashboard
   resources :lessons do
     resources :bookings, only: [:create]
   end
