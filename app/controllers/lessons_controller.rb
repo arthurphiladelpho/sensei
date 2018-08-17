@@ -9,12 +9,7 @@ class LessonsController < ApplicationController
     end
 
     # create markers from the lesson latitude and longitude attributes which will be available to be displayed on the map.
-    @markers = @lessons.map do |lesson|
-      {
-        lat: lesson.latitude,
-        lng: lesson.longitude
-      }
-    end
+    @markers = @lessons.map(&:marker)
   end
 
   def show
