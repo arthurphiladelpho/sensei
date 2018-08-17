@@ -21,4 +21,12 @@ class Lesson < ApplicationRecord
   using: {
     tsearch: { prefix: true } # <-- now `superman batm` will return something!
   }
+
+  def marker
+    {
+      lat: latitude,
+      lng: longitude,
+      icon: 'http://icons.iconarchive.com/icons/icons-land/vista-map-markers/32/Map-Marker-Marker-Outside-Azure-icon.png'
+    }
+  end
 end

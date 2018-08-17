@@ -3,8 +3,11 @@
   flex: 1 0 60%;
   background-color: white;
 }
-.filters {
-  display: flex;
-  justify-content: space-around;
-  background-color: rgba(200, 200, 200, 1);
+
+.search-box {
+  padding: 10px 0;
+}
+
+.heading {
+  text-align: center;
 }
