@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show, :index]
   get 'users/:id/dashboard', to: 'users#dashboard', as: :dashboard
   resources :lessons do
-    resources :bookings, only: [:create]
+    resources :bookings, only: [:new, :create]
   end
   resources :bookings, except: [:index, :new, :create]
 end
