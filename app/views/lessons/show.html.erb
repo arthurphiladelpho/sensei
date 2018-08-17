@@ -33,11 +33,11 @@
         </div>
         <div class="price"><h5>$<%= @lesson.price %> per hour</h5></div>
         <div class="form-wrapper">
-          <%= render 'booking_form' %>
+          <%= render 'booking_form', lesson: @lesson, booking: @booking %>
+          <%= render 'modal', lesson: @lesson, booking: @booking %>
         </div>
       </div>
     </div>
-    <div class="map-container">
-    </div>
+    <div class="map-container" id="map" data-markers=<%= @markers.to_json %>></div>
   </div>
 </div>

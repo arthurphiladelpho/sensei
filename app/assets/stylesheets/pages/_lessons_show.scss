@@ -28,7 +28,7 @@
 
 .short-lesson-info {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   h5{
     font-weight: lighter;
@@ -60,7 +60,7 @@
 
 .desc-and-booking {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: 30px auto;
 }
@@ -103,9 +103,10 @@
 .book-btn {
   margin: 10px auto !important;
 }
-
 .map-container {
-  background-color: red;
+  height: 300px !important;
+  width: 100%;
 }
+
 
 

@@ -11,16 +11,12 @@ class BookingsController < ApplicationController
   def update
   end
 
-  def new
-    @lesson = Lesson.find(params[:lesson_id])
-    @booking = Booking.new
-  end
-
   def create
     @booking = Booking.new(booking_params)
     @booking.user_id = current_user.id
-    @booking.datetime = 'January 1 2019 12:00 pm'
+    @booking.datetime = params[:booking]
     @booking.save
+    redirect_to dashboard_path(current_user)
   end
 
   def destroy
@@ -28,6 +24,6 @@ class BookingsController < ApplicationController
 
   private
   def booking_params
-    params.permit(:lesson_id)
+    params.permit(:lesson_id, :booking)
   end
 end
